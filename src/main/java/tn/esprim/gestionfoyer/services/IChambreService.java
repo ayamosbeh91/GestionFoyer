@@ -1,9 +1,18 @@
 package tn.esprim.gestionfoyer.services;
 
-import org.springframework.stereotype.Service;
+import tn.esprim.gestionfoyer.entities.Chambre;
+import tn.esprim.gestionfoyer.entities.TypeChambre;
 
-@Service
+import java.util.List;
+
 public interface IChambreService {
+    List<Chambre> retrieveAllChambres();
+    Chambre retrieveChambre(Long idChambre);
+    Chambre addChambre(Chambre chambre);
+    Chambre updateChambre(Chambre chambre);
+    void removeChambre(Long idChambre);
 
+    List<Chambre> getChambresParNomBloc(String nomBloc);
+    long nbChambreParTypeEtBloc(TypeChambre type, Long idBloc);
+    List<Chambre> getChambresNonReserveParNomFoyerEtTypeChambre(String nomFoyer, TypeChambre type);
 }
-
