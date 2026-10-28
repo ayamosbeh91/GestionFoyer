@@ -7,8 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+import java.util.List;
+
 @Repository
 public interface FoyerRepository extends JpaRepository<Foyer, Long> {
-    Optional<Foyer> findByNomFoyer(String nomFoyer);
-
+    Foyer findByNomFoyer(String nomFoyer);
+    List<Foyer> findByCapaciteFoyerGreaterThan(long capacite);
 }

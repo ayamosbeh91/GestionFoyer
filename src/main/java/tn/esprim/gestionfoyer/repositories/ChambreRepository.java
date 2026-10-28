@@ -7,12 +7,8 @@ import tn.esprim.gestionfoyer.entities.TypeChambre;
 import java.util.List;
 
 @Repository
-public interface ChambreRepository extends JpaRepository<Chambre,Long> {
-    List<Chambre> findByNumeroChambreIn(List<Long> numerosChambre);
-
-    List<Chambre> findByBloc_NomBloc(String nomBloc);
-
-    List<Chambre> findByBloc_Foyer_NomFoyerAndTypeC(String nomFoyer, TypeChambre typeC);
-
-    long countByTypeCAndBloc_IdBloc(TypeChambre typeC, Long idBloc);
+public interface ChambreRepository extends JpaRepository<Chambre, Long> {
+    List<Chambre> findByTypeC(TypeChambre typeC);
+    List<Chambre> findByBlocNomBloc(String nomBloc);
+    Chambre findByNumeroChambre(long numeroChambre);
 }

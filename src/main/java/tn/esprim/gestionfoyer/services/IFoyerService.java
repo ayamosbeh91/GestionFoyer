@@ -4,12 +4,13 @@ import tn.esprim.gestionfoyer.entities.Foyer;
 
 import java.util.List;
 
-public interface IFoyerService {
-    List<Foyer> retrieveAllFoyers();
-    Foyer retrieveFoyer(Long idFoyer);
-    Foyer addFoyer(Foyer foyer);
-    Foyer updateFoyer(Foyer foyer);
-    void removeFoyer(Long idFoyer);
+import java.util.List;
 
-    Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer, Long idUniversite);
+public interface IFoyerService {
+
+    public List<Foyer> retrieveAllFoyers();
+    public Foyer retrieveFoyer(Long foyerId);
+    public Foyer addFoyer(Foyer f);
+    public void removeFoyer(Long foyerId);
+    public Foyer modifyFoyer(Foyer foyer);
 }

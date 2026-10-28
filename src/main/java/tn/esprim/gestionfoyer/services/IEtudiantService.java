@@ -6,13 +6,9 @@ import java.util.Date;
 import java.util.List;
 
 public interface IEtudiantService {
-    List<Etudiant> retrieveAllEtudiants();
-    Etudiant retrieveEtudiant(Long idEtudiant);
-    Etudiant retrieveEtudiantParCin(long cin);
-    Etudiant addEtudiant(Etudiant etudiant);
-    List<Etudiant> addEtudiants(List<Etudiant> etudiants);
-    Etudiant updateEtudiant(Etudiant etudiant);
-    void removeEtudiant(Long idEtudiant);
-
-    List<Etudiant> findByDateNaissanceBetween(Date dateDebut, Date dateFin);
+    public List<Etudiant> retrieveAllEtudiants();
+    public Etudiant retrieveEtudiant(Long etudiantId);
+    public Etudiant addEtudiant(Etudiant e);
+    public void removeEtudiant(Long etudiantId);
+    public Etudiant modifyEtudiant(Etudiant etudiant);
 }

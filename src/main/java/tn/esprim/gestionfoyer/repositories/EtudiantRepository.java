@@ -11,9 +11,8 @@ import java.util.Optional;
 
 
 @Repository
-public interface EtudiantRepository extends JpaRepository<Etudiant,String> {
-
-    List<Etudiant> findByDateNaissanceBetween(Date dFrom, Date dTo);
-    Optional<Etudiant> findByCin(long cin);
-
+public interface EtudiantRepository extends JpaRepository<Etudiant, Long> {
+    Etudiant findByCin(long cin);
+    List<Etudiant> findByNomEtAndPrenomEt(String nomEt, String prenomEt);
+    List<Etudiant> findByEcoleIgnoreCase(String ecole);
 }

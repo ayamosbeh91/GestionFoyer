@@ -6,13 +6,11 @@ import tn.esprim.gestionfoyer.entities.TypeChambre;
 import java.util.List;
 
 public interface IChambreService {
-    List<Chambre> retrieveAllChambres();
-    Chambre retrieveChambre(Long idChambre);
-    Chambre addChambre(Chambre chambre);
-    Chambre updateChambre(Chambre chambre);
-    void removeChambre(Long idChambre);
 
-    List<Chambre> getChambresParNomBloc(String nomBloc);
-    long nbChambreParTypeEtBloc(TypeChambre type, Long idBloc);
-    List<Chambre> getChambresNonReserveParNomFoyerEtTypeChambre(String nomFoyer, TypeChambre type);
+    public List<Chambre> retrieveAllChambres();
+    public Chambre retrieveChambre(Long chambreId);
+    public Chambre addChambre(Chambre c);
+    public void removeChambre(Long chambreId);
+    public Chambre modifyChambre(Chambre chambre);
+
 }

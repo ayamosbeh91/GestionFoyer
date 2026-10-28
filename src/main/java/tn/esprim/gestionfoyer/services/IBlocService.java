@@ -5,12 +5,9 @@ import tn.esprim.gestionfoyer.entities.Bloc;
 import java.util.List;
 
 public interface IBlocService {
-    List<Bloc> retrieveAllBlocs();
-    Bloc retrieveBloc(Long idBloc);
-    Bloc addBloc(Bloc bloc);
-    Bloc updateBloc(Bloc bloc);
-    void removeBloc(Long idBloc);
-
-    Bloc affecterChambresABloc(List<Long> numerosChambre, Long idBloc);
-    Bloc affecterBlocAFoyer(String nomBloc, String nomFoyer);
+    public List<Bloc> retrieveAllBlocs();
+    public Bloc retrieveBloc(Long blocId);
+    public Bloc addBloc(Bloc b);
+    public void removeBloc(Long blocId);
+    public Bloc modifyBloc(Bloc bloc);
 }
